@@ -1,43 +1,36 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es2021': true
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  settings: {
+    react: {
+      version: "detect",
     },
-    'settings': {
-        'react': {
-            'version': 'detect',
-        }
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/babel",
+    "prettier/prettier",
+    "prettier/react",
+    "prettier/standard",
+],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    'extends': [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended'
-    ],
-    'parser': '@typescript-eslint/parser',
-    'parserOptions': {
-        'ecmaFeatures': {
-            'jsx': true
-        },
-        'ecmaVersion': 12,
-        'sourceType': 'module'
-    },
-    'plugins': [
-        'react',
-        '@typescript-eslint'
-    ],
-    'rules': {
-        'indent': [
-            'error',
-            4
-        ],
-        'linebreak-style': 0,
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'always'
-        ]
-    }
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["react", "@typescript-eslint", "prettier"],
+  rules: {
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+  },
 };

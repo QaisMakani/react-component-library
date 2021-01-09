@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import TestComponent from './TestComponent';
+import { TestComponentProps } from './TestComponent.types';
 
 export default {
-  title: "TestComponent"
+    title: 'TestComponent'
 };
 
-export const Primary = () => <TestComponent theme="primary" />;
+export const Primary = (): React.ReactElement<TestComponentProps> => <TestComponent theme="primary" />;
 
-export const Secondary = () => <TestComponent theme="secondary" />;
+export const Secondary = (): React.ReactElement<TestComponentProps> => <TestComponent theme="secondary" />;
